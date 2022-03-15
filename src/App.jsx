@@ -1,13 +1,19 @@
-import React from 'react';
+import { useContext } from 'react';
+import MyContext from './context/MyContext';
+import DropDowns from './components/DropDowns';
+import Weather from './components/Weather';
+
 import './App.css';
 
 const App = () => {
+  const { citySelect } = useContext(MyContext);
+
   return (
     <main>
-     <h1>Welcome to React</h1>
+      <DropDowns />
+      {citySelect && <Weather />}
     </main>
   );
-}
+};
 
 export default App;
-
