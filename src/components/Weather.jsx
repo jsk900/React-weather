@@ -4,6 +4,9 @@ import { WiSunrise, WiSunset } from 'react-icons/wi';
 import MyContext from '../context/MyContext';
 import dateFormatter from '../helpers/dateFormatter';
 
+//Grab all relevant data and functionality from the context.
+//Arrange the data for display.
+
 const Weather = () => {
   const context = useContext(MyContext);
   const { data, countrySelect, stateSelect, citySelect } = context;

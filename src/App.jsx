@@ -5,6 +5,8 @@ import Weather from './components/Weather';
 
 import './App.css';
 
+//Grab the citySelect state from the context
+//Only render the Weather component if the user has selected a city
 const App = () => {
   const { citySelect } = useContext(MyContext);
 

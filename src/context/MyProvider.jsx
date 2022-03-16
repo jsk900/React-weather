@@ -2,6 +2,19 @@ import { useState, useRef, useEffect } from 'react';
 import { Country, State, City } from 'country-state-city';
 import MyContext from './MyContext';
 
+//We get all the countries from our library country-state-city and
+//put it into our reference variable countries
+//Create selection states for country, state and city
+//Create states for state lists and for city lists.
+
+//Use an effect to rebuild the states list everytime our country selection
+//changes.
+//Use an effect to rebuild the cities list everytime the state selection changes.
+//Use an effect to fetch data from the weather api.
+
+//Make all relevant data and functionality available to the provider so it
+//can provide it to the context through the value prop.
+
 const MyProvider = ({ children }) => {
   const countries = useRef(Country.getAllCountries());
 

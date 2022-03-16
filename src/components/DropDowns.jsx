@@ -1,25 +1,26 @@
 import { useContext } from 'react';
 import MyContext from '../context/MyContext';
 
+//Grab all relevant data and functionality from our context.
+//Populate all our drop downs with country, state and city lists.
+//Use onChange handlers to grab the selected items.
+//Populate the relevant react states with the selections.
+
 const Dropdowns = () => {
   const context = useContext(MyContext);
   const {
-    //countrySelect,
     setCountrySelect,
     countries,
     states,
-    //stateSelect,
     setStateSelect,
     cities,
     setCitySelect,
-    //citySelect,
   } = context;
 
   return (
     <div className='select-container'>
       <div className='custom-select'>
         <select
-          //defaultValue={countrySelect.country}
           onChange={(e) =>
             setCountrySelect({
               country:
