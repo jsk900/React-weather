@@ -37,7 +37,7 @@ const MyProvider = ({ children }) => {
 
   const API_KEY = process.env.REACT_APP_API_KEY;
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${citySelect},${stateSelect.stateCode},${countrySelect.countryCode}&units=metric&appid=${API_KEY}`;
-  console.log(URL);
+
   useEffect(() => {
     setStates(State.getStatesOfCountry(countrySelect.countryCode));
     setData({ results: null, loading: true, error: null });
